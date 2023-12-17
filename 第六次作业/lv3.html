@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea{
+            width: 100%;
+            height: 100px;
+            resize: none; 
+        }
+        
+        #btn1{
+            float: right;
+        }
+        div{
+            height: 1000px;
+        }
+        #wu{
+            color: burlywood;
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            let num=0;
+            let wu=document.getElementById("wu");
+            let text=document.getElementById("text");
+            let shuru=document.getElementById("shuru");
+            let btn1=document.getElementById("btn1");
+            let qu=document.getElementById("qu");
+            btn1.onclick=function(){
+                num++;
+                if(num==1) qu.removeChild(wu);
+                text.innerHTML="评论"+"("+num+")";
+                let myp=document.createElement("p");
+                let deleBtn=document.createElement("button");               
+                myp.innerHTML=shuru.value;
+                deleBtn.innerHTML="删除";
+                qu.appendChild(myp);
+                qu.appendChild(deleBtn);
+                deleBtn.style.float="right";
+                deleBtn.onclick=function(){
+                    if(confirm("确认删除该评论？")){
+                    qu.removeChild(myp);
+                    qu.removeChild(deleBtn);
+                    num--;
+                    text.innerHTML="评论"+"("+num+")";
+                  }
+                  if(num==0){
+                    qu.appendChild(wu);
+                  }                   
+                }
+            }   
+        }
+    </script>
+    <script>
+    </script>
+</head>
+<body>
+    <p id="text">评论(0)</p>
+    <textarea id="shuru"></textarea>
+    <br>
+    <button id="btn1">发送</button>
+    <div id="qu">
+        <p id="wu">还没有评论,快来抢沙发~</p>
+    </div>
+</body>
+</html>
