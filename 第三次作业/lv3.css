@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box1{
+    width: 320px;
+    height: 500px;
+    border: 1px solid black;
+    flex-shrink: 0;
+}
+.box2{
+    width: 320px;
+    height: 300px;
+    border: 1px solid black;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+.box3{
+    width: 320px;
+    height: 100px;
+    border: 1px solid black;
+    flex-shrink: 1;
+    align-self: flex-start;
+}
+.box4{
+    width: 320px;
+    height: 600px;
+    border: 1px solid black;
+    flex-shrink: 2;
+}
+.box{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    gap:20px;
+}

@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 30px;
+    width: 300px;
+    height: 400px;
+    background-color: black;
+    transition: all 1s;
+    opacity: 0.7;
+}
+.box:hover{
+    opacity: 1;
+    margin-top: 10px;
+}
+img{
+    position: relative;
+    left: 210px;
+    top: 20px;
+    width: 50px;
+}
+p{
+    position: relative;
+    left: 10px;
+    top: 20px;
+    font-size :18px;;
+    color: bisque;
+}
+.one{
+    font-size:20px;
+    color: aliceblue;
+}
+input{
+    position: relative;
+    left: 70px;
+    top: 20px;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    transition-duration: 1s;
+}
+input:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
